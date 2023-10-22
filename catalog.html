@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catalog</title>
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
     <header class="main-header">
@@ -13,13 +14,19 @@
             <a class="main-logo" href="#">
               <img
                 class="logo"
-                src=""
+                src="images/logo-gllacy.svg"
                 alt="Логотип магазина мороженного Глейси."
               />
             </a>
             <ul class="main-navigation-list">
               <li class="main-navigation-item">
-                <a class="main-navigation-link" href="">Каталог</a>
+                <a class="main-navigation-link" href="catalog.html">
+                  <select class="select-control" aria-label="Каталог">
+                    <option value="popular">Каталог</option>
+                    <option value="cheap"></option>
+                    <option value="expensive"></option>
+                  </select>
+                </a>
               </li>
               <li class="main-navigation-item">
                 <a class="main-navigation-link" href="">Доставка и оплата</a>
