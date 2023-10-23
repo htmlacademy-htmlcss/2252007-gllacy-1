@@ -334,6 +334,88 @@ body {
 }
 
 /* Promotion */
+.promotion {
+  width: 1170px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.promotion-main-title {
+  width: 434px;
+  margin: auto;
+  color: #2d3440;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 46px;
+  margin-bottom: 55px;
+}
+
+.promotion-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 .promotion-item {
+  width: 570px;
+  display: flex;
+  justify-content: space-between;
   background-color: #ff7799;
+  position: relative;
+  border-radius: 16px;
+}
+
+.promotion-text {
+  width: 317px;
+  display: flex;
+  flex-direction: column;
+  margin: 36px 200px 36px 36px;
+}
+
+.promotion-title {
+  margin: 0;
+  text-align: left;
+  color: #2d3440;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 28px;
+}
+
+.promotion-description {
+  margin: 0;
+  width: 304px;
+  color: #2d3440;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 28px;
+}
+
+.promotion-button {
+  width: 184px;
+  font-family: "Inter", sans-serif;
+  color: #2d3440;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  border-radius: 26px;
+  border: 4px solid #ffcbd8;
+  background: #fcfcfc;
+  box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
+  padding: 12px 32px;
+  cursor: pointer;
+}
+
+.promotion-image {
+  position: absolute;
+  right: 0;
+  top: 8px;
 }
