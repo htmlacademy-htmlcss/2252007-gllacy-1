@@ -1017,9 +1017,6 @@ body {
   display: flex;
 }
 
-.footer-links {
-}
-
 .logo-html-academy-img {
   margin-bottom: 14px;
 }
@@ -1049,4 +1046,59 @@ body {
   position: absolute;
   bottom: -1px;
   left: 0;
+}
+
+/* Catalog */
+.main-content {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.breadcrumbs-content {
+  width: 379px;
+  margin: 32px 791px 40px 0;
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  margin-bottom: 16px;
+}
+
+.breadcrumbs-link {
+  width: 335px;
+  color: #2d3440;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-right: 28px;
+  text-decoration: none;
+  position: relative;
+}
+
+.breadcrumbs-item {
+  position: relative;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/arrows-right.svg");
+  width: 12px;
+  height: 12px;
+  top: 7px;
+  right: 7px;
+}
+
+.catalog-title {
+  width: 379px;
+  color: #2d3440;
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 46px;
+  margin: 0;
 }
