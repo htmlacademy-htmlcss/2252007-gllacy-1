@@ -989,5 +989,68 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal Window -->
+    <div class="modal-container modal-close">
+      <div class="modal modal-contacts">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <div class="modal-content">
+          <h2 class="modal-title">Мы обязательно ответим вам!</h2>
+          <!-- Form -->
+          <form
+            class="contacts-form"
+            action="https://echo.htmlacademy.ru/"
+            method="post"
+          >
+            <p class="field-group">
+              <label class="visually-hidden" for="client-name"
+                >Имя и фамилия</label
+              >
+              <span class="contacts-form-label">
+                <input
+                  class="contacts-form-field field-name"
+                  type="text"
+                  id="client-name"
+                  name="client-name"
+                  placeholder="Имя и фамилия"
+                  required
+                />
+              </span>
+            </p>
+            <p class="field-group">
+              <label class="visually-hidden" for="client-email">Email</label>
+              <span class="contacts-form-label">
+                <input
+                  class="contacts-form-field field-email"
+                  type="email"
+                  id="client-email"
+                  name="client-email"
+                  placeholder="email@example.com"
+                  required
+                />
+              </span>
+            </p>
+            <p class="field-group">
+              <label class="visually-hidden" for="client-text"
+                >В свободной форме</label
+              >
+              <span class="contacts-form-label">
+                <input
+                  class="contacts-form-field field-text"
+                  type="text"
+                  id="client-text"
+                  name="client-text"
+                  placeholder="В свободной форме"
+                  required
+                />
+              </span>
+            </p>
+            <button class="modal-button" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
