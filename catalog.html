@@ -19,35 +19,39 @@
               />
             </a>
             <ul class="main-navigation-list">
-              <li class="main-navigation-item">
-                <ul class="catalog-list" aria-label="Каталог">
-                  <li class="catalog-item">
-                    <a class="catalog-item-link" href="catalog.html">
-                      Каталог<svg
-                        class="catalog-item-svg"
-                        aria-label="Развернуть список."
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="17"
-                        viewBox="0 0 16 17"
-                        fill="none"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M3.80812 7.05317C3.54777 6.79282 3.12566 6.79282 2.86531 7.05317C2.60496 7.31352 2.60496 7.73563 2.86531 7.99598L7.52565 12.6563C7.52771 12.6584 7.52979 12.6606 7.53189 12.6626C7.66259 12.7933 7.83404 12.8584 8.00534 12.8579C8.1753 12.8574 8.34511 12.7923 8.47478 12.6626C8.47687 12.6606 8.47894 12.6585 8.48099 12.6564L13.1414 7.99598C13.4017 7.73563 13.4017 7.31352 13.1414 7.05317C12.881 6.79282 12.4589 6.79282 12.1986 7.05317L8.00334 11.2484L3.80812 7.05317Z"
-                          fill="#2D3440"
-                        />
-                      </svg>
-                    </a>
+              <li
+                class="main-navigation-item tabs-item tabs-item--active tabs-item--dropdown"
+              >
+                <a
+                  class="main-navigation-link tabs-item-link"
+                  href="catalog.html"
+                >
+                  Каталог</a
+                >
+                <ul class="tabs-dropdown-list">
+                  <li class="tabs-dropdown-item">
+                    <a class="tabs-dropdown-link" href="#"></a>
                   </li>
-                  <li class="catalog-item">
-                    <a class="catalog-item-link" href="#"></a>
-                  </li>
-                  <li class="catalog-item">
-                    <a class="catalog-item-link" href="#"></a>
+                  <li class="tabs-dropdown-item">
+                    <a class="tabs-dropdown-item-link" href="#"></a>
                   </li>
                 </ul>
+                <svg
+                  class="dropdown-item-svg"
+                  aria-label="Развернуть список."
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="17"
+                  viewBox="0 0 16 17"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M3.80812 7.05317C3.54777 6.79282 3.12566 6.79282 2.86531 7.05317C2.60496 7.31352 2.60496 7.73563 2.86531 7.99598L7.52565 12.6563C7.52771 12.6584 7.52979 12.6606 7.53189 12.6626C7.66259 12.7933 7.83404 12.8584 8.00534 12.8579C8.1753 12.8574 8.34511 12.7923 8.47478 12.6626C8.47687 12.6606 8.47894 12.6585 8.48099 12.6564L13.1414 7.99598C13.4017 7.73563 13.4017 7.31352 13.1414 7.05317C12.881 6.79282 12.4589 6.79282 12.1986 7.05317L8.00334 11.2484L3.80812 7.05317Z"
+                    fill="#2D3440"
+                  />
+                </svg>
               </li>
               <li class="main-navigation-item">
                 <a class="main-navigation-link" href="">Доставка и оплата</a>
@@ -102,7 +106,7 @@
                   >Вход</a
                 >
               </li>
-              <li class="user-navigation-item">
+              <li class="user-navigation-item-cart">
                 <a
                   class="user-navigation-link user-navigation-link-cart"
                   href="#"
@@ -122,6 +126,84 @@
                     /></svg
                   >2 товара</a
                 >
+
+                <!-- Popover -->
+                <div class="popover popover-cart popover-close">
+                  <div class="popover-content">
+                    <h2 class="popover-title">Корзина</h2>
+                    <ul class="popover-list">
+                      <li class="popover-item">
+                        <a class="popover-link" href="#">
+                          <img
+                            class="popover-image"
+                            src="images/product-1.jpg"
+                            alt="Сливочное мороженое с малиновым джемом."
+                            width="46"
+                            height="46"
+                          />
+                          <div class="popover-item-description">
+                            <p class="popover-item-title">Малинка</p>
+                            <p class="popover-item-amount">1 кг х 310 ₽</p>
+                          </div>
+                        </a>
+                        <p class="popover-item-price">310 ₽</p>
+                        <svg
+                          class="popover-item-cross"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M12.803 4.13807C13.0634 3.87772 13.0634 3.45561 12.803 3.19526C12.5427 2.93491 12.1206 2.93491 11.8602 3.19526L7.99914 7.05633L4.13807 3.19526C3.87772 2.93491 3.45561 2.93491 3.19526 3.19526C2.93491 3.45561 2.93491 3.87772 3.19526 4.13807L7.05633 7.99914L3.19526 11.8602C2.93491 12.1206 2.93491 12.5427 3.19526 12.803C3.45561 13.0634 3.87772 13.0634 4.13807 12.803L7.99914 8.94195L11.8602 12.803C12.1206 13.0634 12.5427 13.0634 12.803 12.803C13.0634 12.5427 13.0634 12.1206 12.803 11.8602L8.94195 7.99914L12.803 4.13807Z"
+                            fill="#2D3440"
+                          />
+                        </svg>
+                      </li>
+                      <li class="popover-item">
+                        <a class="popover-link" href="#">
+                          <img
+                            class="popover-image"
+                            src="images/product-4.jpg"
+                            alt="Ванильный пломбир со сладкой посыпкой."
+                            width="46"
+                            height="46"
+                          />
+                          <div class="popover-item-description">
+                            <p class="popover-item-title">Бабл-гам</p>
+                            <p class="popover-item-amount">1,5 кг х 320 ₽</p>
+                          </div>
+                        </a>
+
+                        <p class="popover-item-price">480 ₽</p>
+                        <svg
+                          class="popover-item-cross"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M12.803 4.13807C13.0634 3.87772 13.0634 3.45561 12.803 3.19526C12.5427 2.93491 12.1206 2.93491 11.8602 3.19526L7.99914 7.05633L4.13807 3.19526C3.87772 2.93491 3.45561 2.93491 3.19526 3.19526C2.93491 3.45561 2.93491 3.87772 3.19526 4.13807L7.05633 7.99914L3.19526 11.8602C2.93491 12.1206 2.93491 12.5427 3.19526 12.803C3.45561 13.0634 3.87772 13.0634 4.13807 12.803L7.99914 8.94195L11.8602 12.803C12.1206 13.0634 12.5427 13.0634 12.803 12.803C13.0634 12.5427 13.0634 12.1206 12.803 11.8602L8.94195 7.99914L12.803 4.13807Z"
+                            fill="#2D3440"
+                          />
+                        </svg>
+                      </li>
+                    </ul>
+                    <div class="popover-bottom">
+                      <button class="popover-button" type="submit">
+                        Оформить заказ
+                      </button>
+                      <span class="sum">Итого: 790 ₽</span>
+                    </div>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
