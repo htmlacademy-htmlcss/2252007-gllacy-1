@@ -145,12 +145,12 @@ body.slider-2 {
   padding-bottom: 8px;
   border-radius: 4px;
   box-shadow: 0 8px 16px 0 rgba(45, 52, 64, 0.12);
-  align-items: flex-start;
+  /* align-items: flex-start; */
 }
 
-.popover-dropdown-close {
+/* .popover-dropdown-close {
   display: none;
-}
+} */
 
 .tabs-item-link:hover {
   padding: 8px 38px 8px 16px;
@@ -179,7 +179,7 @@ body.slider-2 {
   width: 106px;
   padding-left: 16px;
   padding-right: 16px;
-  align-items: flex-start;
+  /* align-items: flex-start; */
 }
 
 .tabs-dropdown-item {
@@ -194,8 +194,8 @@ body.slider-2 {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  margin-top: 6px;
-  margin-bottom: 6px;
+  /* margin-top: 6px;
+  margin-bottom: 6px; */
 }
 
 .new-items {
