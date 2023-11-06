@@ -11,7 +11,7 @@
       <div class="container">
         <nav class="navigation">
           <div class="main-navigation">
-            <a class="main-logo" href="index.html">
+            <a class="main-logo" href="#">
               <img
                 class="logo"
                 src="images/logo-gllacy.svg"
@@ -26,32 +26,49 @@
                   class="main-navigation-link tabs-item-link"
                   href="catalog.html"
                 >
-                  Каталог</a
-                >
-                <ul class="tabs-dropdown-list">
-                  <li class="tabs-dropdown-item">
-                    <a class="tabs-dropdown-link" href="#"></a>
-                  </li>
-                  <li class="tabs-dropdown-item">
-                    <a class="tabs-dropdown-item-link" href="#"></a>
-                  </li>
-                </ul>
-                <svg
-                  class="dropdown-item-svg"
-                  aria-label="Развернуть список."
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="17"
-                  viewBox="0 0 16 17"
-                  fill="none"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M3.80812 7.05317C3.54777 6.79282 3.12566 6.79282 2.86531 7.05317C2.60496 7.31352 2.60496 7.73563 2.86531 7.99598L7.52565 12.6563C7.52771 12.6584 7.52979 12.6606 7.53189 12.6626C7.66259 12.7933 7.83404 12.8584 8.00534 12.8579C8.1753 12.8574 8.34511 12.7923 8.47478 12.6626C8.47687 12.6606 8.47894 12.6585 8.48099 12.6564L13.1414 7.99598C13.4017 7.73563 13.4017 7.31352 13.1414 7.05317C12.881 6.79282 12.4589 6.79282 12.1986 7.05317L8.00334 11.2484L3.80812 7.05317Z"
-                    fill="#2D3440"
-                  />
-                </svg>
+                  Каталог
+                  <svg
+                    class="dropdown-item-svg"
+                    aria-label="Развернуть список."
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.80812 7.05317C3.54777 6.79282 3.12566 6.79282 2.86531 7.05317C2.60496 7.31352 2.60496 7.73563 2.86531 7.99598L7.52565 12.6563C7.52771 12.6584 7.52979 12.6606 7.53189 12.6626C7.66259 12.7933 7.83404 12.8584 8.00534 12.8579C8.1753 12.8574 8.34511 12.7923 8.47478 12.6626C8.47687 12.6606 8.47894 12.6585 8.48099 12.6564L13.1414 7.99598C13.4017 7.73563 13.4017 7.31352 13.1414 7.05317C12.881 6.79282 12.4589 6.79282 12.1986 7.05317L8.00334 11.2484L3.80812 7.05317Z"
+                      fill="#2D3440"
+                    /></svg
+                ></a>
+                <!-- Catalog Dropdown List -->
+                <div class="popover-dropdown popover-dropdown-close">
+                  <ul class="tabs-dropdown-list">
+                    <li class="tabs-dropdown-item new-items">
+                      <a class="tabs-dropdown-item-link new-items-link" href="#"
+                        >Новинки</a
+                      >
+                    </li>
+                    <li class="tabs-dropdown-item">
+                      <a class="tabs-dropdown-item-link" href="catalog.html"
+                        >Сливочное</a
+                      >
+                    </li>
+                    <li class="tabs-dropdown-item">
+                      <a class="tabs-dropdown-item-link" href="">Щербеты</a>
+                    </li>
+                    <li class="tabs-dropdown-item">
+                      <a class="tabs-dropdown-item-link" href=""
+                        >Фруктовый лед</a
+                      >
+                    </li>
+                    <li class="tabs-dropdown-item">
+                      <a class="tabs-dropdown-item-link" href="">Мелорин</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li class="main-navigation-item">
                 <a class="main-navigation-link" href="">Доставка и оплата</a>
@@ -66,10 +83,14 @@
               >+7 800 555-86-28</a
             >
             <ul class="user-navigation-list">
-              <li class="user-navigation-item">
-                <a class="user-navigation-link" href="#">
+              <li class="user-navigation-item user-navigation-item-search">
+                <a
+                  class="user-navigation-link user-navigation-link-search"
+                  href="#"
+                >
                   <svg
                     class="search"
+                    aria-label="Поиск."
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="17"
@@ -84,13 +105,48 @@
                     />
                   </svg>
                 </a>
+                <!-- Popover Search -->
+                <div class="popover popover-search popover-search-close">
+                  <div class="popover-search-content">
+                    <div class="container-search-form">
+                      <form
+                        class="search-form"
+                        action="https://echo.htmlacademy.ru/"
+                        method="get"
+                      >
+                        <label class="search-label" for="search-gllacy">
+                          <span class="visually-hidden">Search</span>
+                          <input
+                            class="field field-search"
+                            type="text"
+                            placeholder="Поиск по сайту"
+                            name="search-gllacy"
+                            id="search-gllacy"
+                            required
+                          />
+                        </label>
+                      </form>
+                    </div>
+                    <!-- При добавлении класса invalid для input - будет состояние ошибки -->
+                    <!-- <input
+                      class="field field-search invalid"
+                      type="text"
+                      placeholder="Ошибка"
+                      name="search-gllacy"
+                      id="search-gllacy"
+                      required
+                    /> -->
+                    <!-- Disabled -->
+                  </div>
+                </div>
               </li>
-              <li class="user-navigation-item">
+              <li class="user-navigation-item user-navigation-item-enter">
                 <a
                   class="user-navigation-link user-navigation-link-enter"
                   href="#"
                   ><svg
                     class="enter"
+                    aria-label="Вход."
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="17"
@@ -105,13 +161,64 @@
                     /></svg
                   >Вход</a
                 >
+                <!-- Popover Enter -->
+                <div class="popover popover-enter popover-enter-close">
+                  <div class="popover-enter-content">
+                    <h2 class="popover-title">Личный кабинет</h2>
+                    <div class="container-enter-form">
+                      <form
+                        class="enter-form"
+                        action="https://echo.htmlacademy.ru/"
+                        method="post"
+                      >
+                        <label class="enter-label" for="enter-gllacy">
+                          <span class="visually-hidden">Email</span>
+                          <input
+                            class="field field-enter"
+                            type="email"
+                            placeholder="email@example.com"
+                            name="enter-gllacy"
+                            id="enter-gllacy"
+                            required
+                          />
+                        </label>
+
+                        <label class="enter-label" for="password-gllacy">
+                          <span class="visually-hidden">Password</span>
+                          <input
+                            class="field field-enter field-enter-password"
+                            type="password"
+                            placeholder=""
+                            name="password-gllacy"
+                            id="password-gllacy"
+                            required
+                          />
+                        </label>
+                      </form>
+                    </div>
+                    <div class="popover-enter-bottom">
+                      <button class="popover-enter-button" type="button">
+                        Войти
+                      </button>
+                      <div class="popover-help">
+                        <a class="popover-help-link restore-password" href=""
+                          >Забыли пароль?</a
+                        >
+                        <a class="popover-help-link registration" href=""
+                          >Регистрация</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
-              <li class="user-navigation-item-cart">
+              <li class="user-navigation-item user-navigation-item-cart">
                 <a
                   class="user-navigation-link user-navigation-link-cart"
                   href="#"
                   ><svg
                     class="cart"
+                    aria-label="Корзина."
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="17"
@@ -127,9 +234,9 @@
                   >2 товара</a
                 >
 
-                <!-- Popover -->
-                <div class="popover popover-cart popover-close">
-                  <div class="popover-content">
+                <!-- Popover  Cart-->
+                <div class="popover popover-cart popover-cart-close">
+                  <div class="popover-cart-content">
                     <h2 class="popover-title">Корзина</h2>
                     <ul class="popover-list">
                       <li class="popover-item">
@@ -197,7 +304,7 @@
                       </li>
                     </ul>
                     <div class="popover-bottom">
-                      <button class="popover-button" type="submit">
+                      <button class="popover-cart-button" type="submit">
                         Оформить заказ
                       </button>
                       <span class="sum">Итого: 790 ₽</span>
@@ -386,7 +493,7 @@
                     />
                     <span class="checkbox-control-mark"></span>
                     <svg
-                      class="checked-svg"
+                      class="checked-svg disabled-svg"
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
                       height="16"
@@ -419,6 +526,28 @@
                       id="fruits"
                     />
                     <span class="checkbox-control-mark"></span>
+                    <svg
+                      class="checked-svg"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                    >
+                      <g clip-path="url(#clip0_32680_1578)">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M1.61526 1.61526C1.79573 1.43471 2.04045 1.33333 2.29556 1.33333H11.2544C11.6226 1.33333 11.9211 1.03486 11.9211 0.666667C11.9211 0.298477 11.6226 0 11.2544 0H2.29556C1.68665 0 1.10273 0.241993 0.672253 0.672654C0.241784 1.1033 0 1.68733 0 2.29624V13.7033C0 14.3122 0.241784 14.8962 0.672253 15.3269C1.10273 15.7575 1.68665 15.9995 2.29556 15.9995H13.6978C14.3067 15.9995 14.8906 15.7575 15.3211 15.3269C15.7515 14.8962 15.9933 14.3122 15.9933 13.7033V7.99976C15.9933 7.63157 15.6949 7.3331 15.3267 7.3331C14.9585 7.3331 14.66 7.63157 14.66 7.99976V13.7033C14.66 13.9588 14.5586 14.2037 14.3781 14.3843C14.1976 14.5648 13.9529 14.6662 13.6978 14.6662H2.29556C2.04045 14.6662 1.79573 14.5648 1.61526 14.3843C1.43478 14.2037 1.33333 13.9588 1.33333 13.7033V2.29624C1.33333 2.04077 1.43478 1.79582 1.61526 1.61526ZM15.8166 1.9404C16.0698 1.6731 16.0584 1.25115 15.7911 0.997933C15.5238 0.74472 15.1019 0.756136 14.8486 1.02343L7.61402 8.66042L5.78242 6.72695C5.52921 6.45966 5.10725 6.44824 4.83996 6.70145C4.57266 6.95467 4.56125 7.37662 4.81446 7.64392L7.13004 10.0883C7.25594 10.2212 7.43095 10.2965 7.61402 10.2965C7.79709 10.2965 7.9721 10.2212 8.098 10.0883L15.8166 1.9404Z"
+                          fill="#2D3440"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_32680_1578">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
                     <span class="control-label">фрукты</span>
                   </label>
                 </li>
@@ -431,6 +560,28 @@
                       id="syrups"
                     />
                     <span class="checkbox-control-mark"></span>
+                    <svg
+                      class="checked-svg"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                    >
+                      <g clip-path="url(#clip0_32680_1578)">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M1.61526 1.61526C1.79573 1.43471 2.04045 1.33333 2.29556 1.33333H11.2544C11.6226 1.33333 11.9211 1.03486 11.9211 0.666667C11.9211 0.298477 11.6226 0 11.2544 0H2.29556C1.68665 0 1.10273 0.241993 0.672253 0.672654C0.241784 1.1033 0 1.68733 0 2.29624V13.7033C0 14.3122 0.241784 14.8962 0.672253 15.3269C1.10273 15.7575 1.68665 15.9995 2.29556 15.9995H13.6978C14.3067 15.9995 14.8906 15.7575 15.3211 15.3269C15.7515 14.8962 15.9933 14.3122 15.9933 13.7033V7.99976C15.9933 7.63157 15.6949 7.3331 15.3267 7.3331C14.9585 7.3331 14.66 7.63157 14.66 7.99976V13.7033C14.66 13.9588 14.5586 14.2037 14.3781 14.3843C14.1976 14.5648 13.9529 14.6662 13.6978 14.6662H2.29556C2.04045 14.6662 1.79573 14.5648 1.61526 14.3843C1.43478 14.2037 1.33333 13.9588 1.33333 13.7033V2.29624C1.33333 2.04077 1.43478 1.79582 1.61526 1.61526ZM15.8166 1.9404C16.0698 1.6731 16.0584 1.25115 15.7911 0.997933C15.5238 0.74472 15.1019 0.756136 14.8486 1.02343L7.61402 8.66042L5.78242 6.72695C5.52921 6.45966 5.10725 6.44824 4.83996 6.70145C4.57266 6.95467 4.56125 7.37662 4.81446 7.64392L7.13004 10.0883C7.25594 10.2212 7.43095 10.2965 7.61402 10.2965C7.79709 10.2965 7.9721 10.2212 8.098 10.0883L15.8166 1.9404Z"
+                          fill="#2D3440"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_32680_1578">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
                     <span class="control-label">сиропы</span>
                   </label>
                 </li>
@@ -443,6 +594,28 @@
                       id="jams"
                     />
                     <span class="checkbox-control-mark"></span>
+                    <svg
+                      class="checked-svg"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                    >
+                      <g clip-path="url(#clip0_32680_1578)">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M1.61526 1.61526C1.79573 1.43471 2.04045 1.33333 2.29556 1.33333H11.2544C11.6226 1.33333 11.9211 1.03486 11.9211 0.666667C11.9211 0.298477 11.6226 0 11.2544 0H2.29556C1.68665 0 1.10273 0.241993 0.672253 0.672654C0.241784 1.1033 0 1.68733 0 2.29624V13.7033C0 14.3122 0.241784 14.8962 0.672253 15.3269C1.10273 15.7575 1.68665 15.9995 2.29556 15.9995H13.6978C14.3067 15.9995 14.8906 15.7575 15.3211 15.3269C15.7515 14.8962 15.9933 14.3122 15.9933 13.7033V7.99976C15.9933 7.63157 15.6949 7.3331 15.3267 7.3331C14.9585 7.3331 14.66 7.63157 14.66 7.99976V13.7033C14.66 13.9588 14.5586 14.2037 14.3781 14.3843C14.1976 14.5648 13.9529 14.6662 13.6978 14.6662H2.29556C2.04045 14.6662 1.79573 14.5648 1.61526 14.3843C1.43478 14.2037 1.33333 13.9588 1.33333 13.7033V2.29624C1.33333 2.04077 1.43478 1.79582 1.61526 1.61526ZM15.8166 1.9404C16.0698 1.6731 16.0584 1.25115 15.7911 0.997933C15.5238 0.74472 15.1019 0.756136 14.8486 1.02343L7.61402 8.66042L5.78242 6.72695C5.52921 6.45966 5.10725 6.44824 4.83996 6.70145C4.57266 6.95467 4.56125 7.37662 4.81446 7.64392L7.13004 10.0883C7.25594 10.2212 7.43095 10.2965 7.61402 10.2965C7.79709 10.2965 7.9721 10.2212 8.098 10.0883L15.8166 1.9404Z"
+                          fill="#2D3440"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_32680_1578">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
                     <span class="control-label">джемы</span>
                   </label>
                 </li>
