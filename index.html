@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" />
   </head>
   <body class="slider-2">
     <header class="main-header">
@@ -118,7 +120,7 @@
                           <span class="visually-hidden">Search</span>
                           <input
                             class="field field-search"
-                            type="text"
+                            type="search"
                             placeholder="Поиск по сайту"
                             name="search-gllacy"
                             id="search-gllacy"
@@ -187,15 +189,15 @@
                             required
                           />
                         </label>
+                        <button
+                          class="popover-enter-button pink-button"
+                          type="submit"
+                        >
+                          Войти
+                        </button>
                       </form>
                     </div>
                     <div class="popover-enter-bottom">
-                      <button
-                        class="popover-enter-button pink-button"
-                        type="button"
-                      >
-                        Войти
-                      </button>
                       <div class="popover-help">
                         <a class="popover-help-link restore-password" href=""
                           >Забыли пароль?</a
@@ -318,14 +320,17 @@
         <div class="slider-pagination">
           <button
             class="slider-pagination-button current"
+            type="button"
             aria-label="Первый товар."
           ></button>
           <button
             class="slider-pagination-button"
+            type="button"
             aria-label="Второй товар."
           ></button>
           <button
             class="slider-pagination-button"
+            type="button"
             aria-label="Третий товар."
           ></button>
         </div>
@@ -352,11 +357,7 @@
             </svg>
           </button>
 
-          <button
-            class="slider-nav-button slider-next slider-disabled"
-            type="button"
-            disabled
-          >
+          <button class="slider-nav-button slider-next" type="button">
             <span class="visually-hidden">Следующий товар</span>
             <svg
               class="slider-nav-arrow"
@@ -460,7 +461,7 @@
                 При покупке 2 кг любого фруктового мороженого добавим в ваш
                 заказ банку малинового варенья бесплатно.
               </p>
-              <button class="promotion-button white-button">
+              <button class="promotion-button white-button" type="button">
                 Хочу подарок
               </button>
             </div>
@@ -480,7 +481,7 @@
                 При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных
                 зефирок совершенно бесплатно.
               </p>
-              <button class="promotion-button white-button">
+              <button class="promotion-button white-button" type="button">
                 Хочу подарок
               </button>
             </div>
@@ -829,7 +830,7 @@
                   >Email</label
                 >
                 <input
-                  class="subscription-field"
+                  class="subscription-field field"
                   type="email"
                   placeholder="email@example.com"
                   name="subscription-email"
@@ -876,7 +877,9 @@
               <p class="field-group">
                 <!-- Tooltip Date -->
                 <span class="tooltip-title-date">
-                  <label class="tooltip-item-title" for="">Дата</label>
+                  <label class="tooltip-item-title" for="delivery-date"
+                    >Дата</label
+                  >
                   <span class="tooltip">
                     <button class="tooltip-toggle" type="button">
                       <svg
@@ -908,7 +911,7 @@
                   </span>
                 </span>
                 <input
-                  class="delivery-form-field field-date"
+                  class="delivery-form-field field-date field"
                   type="date"
                   id="delivery-date"
                   name="delivery-date"
@@ -923,7 +926,7 @@
                   >Телефон</label
                 >
                 <input
-                  class="delivery-form-field field-phone"
+                  class="delivery-form-field field-phone field"
                   type="tel"
                   id="delivery-phone"
                   name="delivery-phone"
@@ -938,7 +941,7 @@
               <p class="field-group">
                 <!-- Tooltip Address -->
                 <span class="tooltip-title-adress">
-                  <label class="tooltip-item-title" for="">Адрес</label>
+                  <label class="tooltip-item-title">Адрес</label>
                   <span class="tooltip-address">
                     <button class="tooltip-toggle" type="button">
                       <svg
@@ -975,7 +978,7 @@
                   >Адрес</label
                 > -->
                 <input
-                  class="delivery-form-field field-adress"
+                  class="delivery-form-field field-adress field"
                   type="text"
                   id="delivery-adress"
                   name="delivery-adress"
@@ -1207,7 +1210,7 @@
               >
               <span class="contacts-form-label">
                 <input
-                  class="contacts-form-field field-name"
+                  class="contacts-form-field field-name field"
                   type="text"
                   id="client-name"
                   name="client-name"
@@ -1220,7 +1223,7 @@
               <label class="visually-hidden" for="client-email">Email</label>
               <span class="contacts-form-label">
                 <input
-                  class="contacts-form-field field-email"
+                  class="contacts-form-field field-email field"
                   type="email"
                   id="client-email"
                   name="client-email"
@@ -1235,7 +1238,7 @@
               >
               <span class="contacts-form-label">
                 <textarea
-                  class="contacts-form-field field-text"
+                  class="contacts-form-field field-text field"
                   name="client-text"
                   id="client-text"
                   cols="30"
@@ -1245,7 +1248,9 @@
                 ></textarea>
               </span>
             </p>
-            <button class="modal-button" type="submit">Отправить</button>
+            <button class="modal-button pink-button" type="submit">
+              Отправить
+            </button>
           </form>
         </div>
       </div>
