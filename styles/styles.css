@@ -124,6 +124,10 @@ body.slider-3 .slider-image::after {
   transform: translateY(-50%);
 }
 
+.min-navigation-item.active .dropdown-item-svg {
+  transform: translateY(-50%) rotate(180deg);
+}
+
 .main-navigation-link {
   list-style-type: none;
   text-decoration: none;
@@ -168,7 +172,7 @@ body.slider-3 .slider-image::after {
   fill: #fcfcfc;
 }
 
-.main-navigation-item.active .popover {
+.main-navigation-item.active .popover-dropdown {
   display: block;
 }
 
@@ -201,6 +205,7 @@ body.slider-3 .slider-image::after {
   padding-bottom: 8px;
   border-radius: 4px;
   box-shadow: 0 8px 16px 0 rgba(45, 52, 64, 0.12);
+  display: none;
 }
 
 .popover-dropdown::before {
@@ -213,13 +218,9 @@ body.slider-3 .slider-image::after {
   right: 0;
 }
 
-.popover-dropdown-close {
-  display: none;
-}
-
-.tabs-item:hover + .popover-dropdown {
+/* .tabs-item:hover + .popover-dropdown {
   display: block;
-}
+} */
 
 /* .tabs-item-link:hover {
   background: #ff4a78;
@@ -228,10 +229,6 @@ body.slider-3 .slider-image::after {
   background-repeat: no-repeat;
   background-position: 84px 10px;
   background-size: 16px 16px;
-} */
-
-/* .tabs-item-link:hover .dropdown-item-svg {
-  display: none;
 } */
 
 .tabs-dropdown-list {
@@ -370,23 +367,19 @@ body.slider-3 .slider-image::after {
   fill: #fcfcfc;
 }
 
-/* .user-navigation-item.active .popover {
+.user-navigation-item.active .popover {
   display: block;
-} */
+}
 
 .user-navigation-item.active .user-navigation-link:hover {
   opacity: 0.6;
 }
 
-/* .user-navigation-item.active .user-navigation-link:hover .popover {
+/* .user-navigation-item.active .user-navigation-link:hover + .popover {
   display: block;
 } */
 
-.user-navigation-item.active .user-navigation-link:hover + .popover {
-  display: block;
-}
-
-.popover-close {
+.popover {
   display: none;
 }
 
@@ -492,36 +485,35 @@ body.slider-3 .slider-image::after {
 }
 
 /* Class Loading - это состояние спинера для загрузки */
-.white-button.loading {
-  padding: 12px 56px 12px 32px;
-  max-width: 211px;
+.loading::after {
+  content: "";
   background-image: url("../images/spinner-white-button.svg");
   background-repeat: no-repeat;
   background-size: 16px 16px;
-  background-position: 155px 18px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: bottom;
+  margin-left: 8px;
 }
 
 .white-button.loading::after {
-  content: "";
   background-image: url("../images/spinner-white-button.svg");
-  background-size: 16px 16px;
-  background-position: 155px 18px;
+}
+
+.pink-button.loading {
+  padding: 12px;
 }
 
 .pink-button.loading::after {
   content: "";
   background-image: url("../images/spinner-pink-button.svg");
   background-size: 16px 16px;
-  background-position: 155px 18px;
-}
-
-.pink-button.loading {
-  padding: 12px 142px 12px 32px;
-  max-width: 211px;
-  background-image: url("../images/spinner-pink-button.svg");
-  background-repeat: no-repeat;
-  background-size: 16px 16px;
-  background-position: 128px 14px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: bottom;
+  margin-left: 8px;
 }
 
 .slider-item-button {
@@ -1637,7 +1629,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .field-search {
-  width: 305px;
+  width: 100%;
   height: 48px;
   border-radius: 4px;
   border: 1px solid #b9b9b9;
@@ -1677,12 +1669,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .field:disabled {
   border: 1px solid #b9b9b9;
   background: #e7e7e7;
-  opacity: 0.65;
+  color: rgba(45, 52, 64, 0.65);
 }
 
 .field:disabled:hover {
-  border: 1px solid #b9b9b9;
-  background: #e7e7e7;
+  /* border: 1px solid #b9b9b9;
+  background: #e7e7e7; */
   color: #2d3440;
 }
 
@@ -1751,18 +1743,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-position: left 16px center;
 }
 
-.popover-enter-button {
+.popover-enter-bottom {
   margin-top: 16px;
-  margin-right: 23px;
-  position: relative;
+  display: flex;
 }
 
-.popover-enter-bottom {
-  /* margin-top: 16px; */
-  display: flex;
-  position: absolute;
-  left: 184px;
-  bottom: 53px;
+.popover-enter-button {
+  margin-right: 23px;
+  position: relative;
 }
 
 .popover-help-link {
@@ -1908,12 +1896,23 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   transform: translateY(-50%);
 }
 
-.popover-item-cross {
+.popover-item-close {
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+  border: none;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+}
+
+.popover-item-cross {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .popover-bottom {
@@ -1923,7 +1922,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .popover-cart-button {
-  width: 206px;
+  min-width: 206px;
   color: #fcfcfc;
   text-align: center;
   font-family: "Inter", sans-serif;
@@ -2361,14 +2360,16 @@ select {
   border-color: rgba(252, 252, 252, 1);
 }
 
-/* .control-input[type="radio"]:focus + .control-mark {
+/* Radio Focus */
+.control-input[type="radio"]:focus-visible + .control-mark {
   border-color: rgba(252, 252, 252, 1);
 }
 
-.control-input[type="radio"]:focus:checked + .control-mark::before {
+.control-input[type="radio"]:checked:focus-visible + .control-mark::before {
   background-color: rgba(252, 252, 252, 1);
-} */
+}
 
+/* Radio Disabled */
 .control-input[type="radio"]:checked:disabled + .control-mark::before {
   background-color: rgba(45, 52, 64, 0.5);
 }
@@ -2425,6 +2426,21 @@ select {
   display: block;
 }
 
+/* Checkbox Focus */
+.control-input[type="checkbox"]:focus-visible + .checkbox-control-mark {
+  border: 2px solid rgba(252, 252, 252, 1);
+}
+
+.control-input[type="checkbox"]:checked:focus-visible + .checkbox-control-mark {
+  display: none;
+}
+
+.control-input[type="checkbox"]:checked:focus-visible ~ .checked-svg path {
+  display: block;
+  fill: #ffffff;
+}
+
+/* Svg */
 svg.checked-svg {
   position: absolute;
   left: 0;
@@ -2437,10 +2453,18 @@ svg.checked-svg:hover path {
 }
 
 /* Disabled */
-/* svg.disabled-svg path {
+.control-input[type="checkbox"]:disabled + .checkbox-control-mark {
+  border: 2px solid rgba(45, 52, 64, 0.5);
+}
+
+.control-input[type="checkbox"]:checked:disabled + .checkbox-control-mark {
+  display: none;
+}
+
+.control-input[type="checkbox"]:checked:disabled ~ .checked-svg path {
+  display: block;
   fill: rgba(45, 52, 64, 0.5);
-  background-color: transparent;
-} */
+}
 
 .sorting-button {
   margin-top: 28px;
@@ -2453,7 +2477,6 @@ svg.checked-svg:hover path {
   font-weight: 700;
   line-height: 20px;
   border-radius: 20px;
-  /* border: 2px solid #fcfcfc; */
   border: none;
   box-shadow: 0 0 0 2px #fcfcfc;
   background: #ffcbd8;
