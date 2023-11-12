@@ -84,7 +84,7 @@ body.slider-3 .slider-image::after {
 
 .navigation {
   display: flex;
-  padding: 24px 0;
+  padding: 22px 0;
   justify-content: space-between;
   align-items: center;
 }
@@ -400,7 +400,7 @@ body.slider-3 .slider-image::after {
   width: 1170px;
   margin: 0 auto;
   display: flex;
-  margin-bottom: 80px;
+  margin-bottom: 94px;
   position: relative;
 }
 
@@ -517,7 +517,7 @@ body.slider-3 .slider-image::after {
 }
 
 .slider-item-button {
-  width: 148px;
+  width: 139px;
   margin: 0 336px 112px 70px;
 }
 
@@ -527,6 +527,7 @@ body.slider-3 .slider-image::after {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 20px;
 }
 
 .slider-image {
@@ -554,12 +555,16 @@ body.slider-3 .slider-image::after {
 .slider-image.current::after {
   width: 327px;
   height: 312px;
+  margin-top: -4px;
 }
 
 .slider-image.current {
-  width: 50%;
+  width: 327px;
+  height: 520px;
   order: 1;
   opacity: 1;
+  margin-left: -10px;
+  margin-right: 18px;
 }
 
 .slider-image.current + .slider-image {
@@ -580,7 +585,7 @@ img {
   list-style: none;
   justify-content: space-between;
   position: absolute;
-  bottom: 0;
+  bottom: -12px;
   left: 0;
 }
 
@@ -626,6 +631,9 @@ img {
   cursor: pointer;
   outline: none;
   /* position: absolute; */
+  margin-top: 6px;
+  margin-right: 2px;
+  margin-left: -2px;
 }
 
 .slider-nav-button:hover {
@@ -683,7 +691,7 @@ img {
   list-style: none;
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -13px;
 }
 
 .social {
@@ -787,7 +795,7 @@ img {
 }
 
 .promotion-button {
-  width: 184px;
+  width: 176px;
 }
 
 .promotion-image {
@@ -832,11 +840,13 @@ a.product-card-image-link {
   margin-bottom: 16px;
 }
 
-.product-imaage {
+.product-image {
   width: 168px;
   height: 168px;
   border-radius: 50%;
   object-fit: cover;
+  /* background: url(<path-to-image>), lightgray 50% / cover no-repeat; */
+  box-shadow: 0 0 45px -27px rgba(0, 0, 0, 0.5);
 }
 
 .product-container {
@@ -849,13 +859,14 @@ a.product-card-image-link {
   color: #2d3440;
   text-align: center;
   font-family: "Inter", sans-serif;
-  margin-bottom: 8px;
+  font-size: 17px;
+  /* margin-bottom: 8px; */
   text-decoration: none;
 }
 
 .product-card-title {
   margin: 0;
-  margin-bottom: 8px;
+  margin-bottom: 9px;
 }
 
 .product-card-description {
@@ -866,7 +877,7 @@ a.product-card-image-link {
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 .buy {
@@ -891,11 +902,18 @@ a.product-card-image-link {
   border: none;
   border-radius: 26px;
   cursor: pointer;
+  position: relative;
+}
+
+.product-cart-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .product-buy:hover {
   background-color: rgba(252, 252, 252, 0.3);
-  /* border: 2px solid rgba(255, 47, 100, 1); */
   box-shadow: 0 0 0 2px rgba(255, 47, 100, 1);
 }
 
@@ -986,7 +1004,7 @@ a.product-card-image-link {
 .about-icon {
   height: 32px;
   width: 32px;
-  padding: 8px;
+  padding: 6px;
   border: 2px solid #2d3440;
   border-radius: 50%;
   flex-shrink: 0;
@@ -1076,7 +1094,7 @@ a.product-card-image-link {
 }
 
 .subscription-field {
-  width: 316px;
+  width: 312px;
   height: 48px;
   padding-left: 16px;
   border: 1px solid #b9b9b9;
@@ -1088,6 +1106,7 @@ a.product-card-image-link {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+  margin-right: 14px;
 }
 
 .subscription-field:hover {
@@ -1098,6 +1117,10 @@ a.product-card-image-link {
   border: 1px solid #2d3440;
   box-shadow: inset 0 0 0 1px #2d3440;
   outline: none;
+}
+
+.subscription-button {
+  width: 152px;
 }
 
 /* Pink Button */
@@ -1148,10 +1171,6 @@ a.product-card-image-link {
   font-weight: 400;
 }
 
-.subscription-button {
-  width: 160px;
-}
-
 /* Delivery */
 .delivery {
   width: 1170px;
@@ -1198,7 +1217,8 @@ a.product-card-image-link {
 
 .delivery-box-title {
   width: 380px;
-  margin: 40px 80px 32px 40px;
+  /* margin: 40px 80px 32px 40px; */
+  margin: 41px 80px 32px 40px;
   color: #565c66;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -1214,7 +1234,7 @@ a.product-card-image-link {
 }
 
 .form-row {
-  width: 420px;
+  /* width: 420px; */
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
@@ -1234,6 +1254,7 @@ a.product-card-image-link {
   font-weight: 700;
   line-height: 20px;
   position: relative;
+  top: -3px;
 }
 
 .tooltip {
@@ -1244,7 +1265,7 @@ a.product-card-image-link {
   padding: 0;
   display: block;
   color: #565c66;
-  top: 5px;
+  top: 2px;
   left: 44px;
 }
 
@@ -1252,7 +1273,7 @@ a.product-card-image-link {
 .tooltip-address {
   position: absolute;
   left: 56px;
-  top: 5px;
+  top: 2px;
 }
 
 .tooltip-toggle {
@@ -1341,10 +1362,13 @@ a.product-card-image-link {
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: -4px;
 }
 
 .delivery-form-field {
-  height: 48px;
+  height: 46px;
   color: #2d3440;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -1353,8 +1377,8 @@ a.product-card-image-link {
   border-radius: 4px;
   border: 1px solid #b9b9b9;
   background: #ffffff;
-  margin-top: 8px;
-  padding-left: 16px;
+  margin-top: 4px;
+  padding-left: 15px;
 }
 
 .delivery-form-field:hover {
@@ -1382,6 +1406,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .field-group {
   margin: 0;
+  position: relative;
 }
 
 .field-date {
@@ -1429,12 +1454,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .contacts-title {
   width: 179px;
-  margin-bottom: 12px;
   color: #565c66;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 
 .contacts-adress {
@@ -1443,6 +1469,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
+  margin-top: 0;
   margin-bottom: 24px;
 }
 
@@ -1453,10 +1480,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
+  margin-top: 0;
   margin-bottom: 12px;
 }
 
 .contacts-box-phone {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -1481,12 +1510,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
   margin-top: 0;
 }
 
 .contacts-button {
-  width: 258px;
+  width: 250px;
 }
 
 /* Modal Window */
@@ -1993,7 +2022,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .footer-container {
   width: 1170px;
-  margin-top: 48px;
+  margin-top: 49px;
   margin-bottom: 48px;
   display: flex;
   justify-content: space-between;
@@ -2014,7 +2043,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: 356px;
   display: grid;
   grid-template-columns: 150px 211px;
-  gap: 1px 0;
+  gap: 9px 0;
   margin-bottom: 9px;
   align-items: baseline;
 }
@@ -2055,7 +2084,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .logo-html-academy-img {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .rights {
@@ -2066,7 +2095,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
-  /* cursor: pointer; */
 }
 
 .academy-link {
