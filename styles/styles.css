@@ -120,13 +120,14 @@ body.slider-3 .slider-image::after {
   width: 16px;
   height: 16px;
   right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.min-navigation-item.active .dropdown-item-svg {
+  /* top: 50%; */
+  top: 19px;
   transform: translateY(-50%) rotate(180deg);
 }
+
+/* .min-navigation-item.active .dropdown-item-svg {
+  transform: translateY(-50%) rotate(180deg);
+} */
 
 .main-navigation-link {
   list-style-type: none;
@@ -193,8 +194,8 @@ body.slider-3 .slider-image::after {
 /* Catalog Dropdown List*/
 .popover-dropdown {
   position: absolute;
-  top: 37px;
-  right: -17px;
+  top: 38px;
+  right: -20px;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
   color: #2d3440;
@@ -285,7 +286,9 @@ body.slider-3 .slider-image::after {
 }
 
 .user-navigation {
-  width: 431px;
+  min-width: 431px;
+
+  max-width: 456px;
   display: flex;
   justify-content: space-between;
 }
@@ -308,7 +311,8 @@ body.slider-3 .slider-image::after {
 .user-navigation-list {
   margin: 0;
   padding: 0;
-  width: 267px;
+  min-width: 267px;
+  max-width: 292px;
   display: flex;
   list-style: none;
   justify-content: space-between;
@@ -322,11 +326,15 @@ body.slider-3 .slider-image::after {
   font-weight: 400;
   line-height: 20px;
   background-color: rgba(252, 252, 252, 0.3);
-  padding: 8px;
+  padding: 6px;
   border-radius: 30px;
   position: relative;
   align-content: center;
   display: flex;
+}
+
+.user-navigation-link-search {
+  padding: 8px;
 }
 
 .user-navigation-link:hover {
@@ -349,12 +357,13 @@ body.slider-3 .slider-image::after {
 
 .user-navigation-link-enter,
 .user-navigation-link-cart {
-  padding: 8px 16px;
+  padding: 6px 16px;
 }
 
 .enter,
 .cart {
   padding-right: 6px;
+  padding-top: 1px;
 }
 
 /* Class Active User Navigation*/
@@ -1547,6 +1556,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border: none;
   background-color: #fcfcfc;
   box-shadow: 0 15px 40px 0 rgba(45, 52, 64, 0.12);
+  border-radius: 8px;
 }
 
 .modal-close-button {
@@ -1580,7 +1590,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .contacts-form-field {
   width: 422px;
-  height: 48px;
+  height: 44px;
   border-radius: 4px;
   border: 1px solid #b9b9b9;
   background-color: rgba(255, 255, 255, 1);
@@ -1605,15 +1615,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .field-text {
-  height: 135px;
+  height: 132px;
   padding-top: 14px;
   resize: none;
 }
 
 .modal-button {
-  width: 160px;
-  margin-top: 16px;
-  color: #fcfcfc;
+  width: 152px;
+  margin-top: 11px;
+  /* color: #fcfcfc;
   text-align: center;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -1624,8 +1634,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border: none;
   background: #ff2f64;
   box-shadow: 0 0 0 4px #ffcbd8, 0 4px 12px 0 rgba(45, 52, 64, 0.1);
-  cursor: pointer;
-  margin-left: 284px;
+  cursor: pointer; */
+  margin-left: 291px;
 }
 
 .user-navigation-item-search {
@@ -1634,7 +1644,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .popover-search {
   position: absolute;
-  top: 45px;
+  top: 40px;
   right: 0;
   z-index: 6;
   box-sizing: border-box;
@@ -1714,7 +1724,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .popover-enter {
   position: absolute;
-  top: 45px;
+  top: 40px;
   right: 0;
   z-index: 6;
   box-sizing: border-box;
@@ -1742,8 +1752,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .field-enter {
-  width: 308px;
-  height: 48px;
+  width: 304px;
+  height: 45px;
   color: #2d3440;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -1769,7 +1779,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .field-enter-password {
   background-image: url("../images/password-enter.svg");
   background-repeat: no-repeat;
-  background-position: left 16px center;
+  background-position: 15px 20px;
+  height: 44px;
 }
 
 .popover-enter-bottom {
@@ -1791,6 +1802,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   text-decoration: none;
   position: relative;
   display: flex;
+}
+
+.restore-password {
+  margin-bottom: 4px;
 }
 
 .popover-help-link:hover {
@@ -1819,7 +1834,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .popover-cart {
   position: absolute;
-  top: 45px;
+  top: 42px;
   right: 0;
   z-index: 6;
   box-sizing: border-box;
@@ -1977,7 +1992,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* Popover Cart Empty */
 .popover-empty {
   position: absolute;
-  top: 45px;
+  top: 41px;
   right: 0;
   z-index: 6;
   box-sizing: border-box;
