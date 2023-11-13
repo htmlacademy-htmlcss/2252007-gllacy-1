@@ -98,6 +98,7 @@ body.slider-3 .slider-image::after {
 .main-navigation-list {
   width: 422px;
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   text-decoration: none;
   justify-content: space-between;
@@ -291,6 +292,7 @@ body.slider-3 .slider-image::after {
 
   max-width: 456px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -315,6 +317,7 @@ body.slider-3 .slider-image::after {
   min-width: 267px;
   max-width: 292px;
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   justify-content: space-between;
 }
@@ -588,8 +591,9 @@ img {
 
 /* Slider Pagination */
 .slider-pagination {
-  width: 52px;
+  width: 60px;
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -695,6 +699,7 @@ img {
 .social-list {
   width: 104px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
   padding: 0;
@@ -833,6 +838,7 @@ img {
   width: 1170px;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
