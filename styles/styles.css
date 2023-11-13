@@ -1917,6 +1917,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   height: 46px;
 }
 
+.popover-item-description {
+  max-width: 100px;
+  padding-right: 20px;
+}
+
 .popover-item-title {
   margin: 0;
   color: #2d3440;
@@ -2159,6 +2164,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin-bottom: 16px;
 }
@@ -2354,6 +2360,7 @@ select {
 .radio-list {
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   background-color: #ffcbd8;
   padding: 8px 24px;
@@ -2447,6 +2454,7 @@ select {
   border-radius: 18px;
   padding: 10px 24px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   list-style: none;
 }
@@ -2533,7 +2541,7 @@ svg.checked-svg:hover path {
 .sorting-button {
   margin-top: 30px;
   width: 185px;
-  height: 36px;
+  /* height: 36px; */
   color: #2d3440;
   text-align: center;
   font-family: "Inter", sans-serif;
@@ -2601,7 +2609,7 @@ svg.checked-svg:hover path {
 
 .catalog-button {
   max-width: 187px;
-  height: 44px;
+  /* height: 44px; */
   margin-top: 3px;
 }
 
@@ -2620,6 +2628,7 @@ svg.checked-svg:hover path {
   padding: 0;
   width: 120px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   list-style: none;
 }
