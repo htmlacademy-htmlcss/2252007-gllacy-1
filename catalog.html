@@ -21,9 +21,8 @@
               />
             </a>
             <ul class="main-navigation-list">
-              <li
-                class="main-navigation-item tabs-item tabs-item--active tabs-item--dropdown"
-              >
+              <!-- При добавлении класса active кнопка будет розовой + появится popover -->
+              <li class="main-navigation-item tabs-item">
                 <a
                   class="main-navigation-link tabs-item-link"
                   href="catalog.html"
@@ -217,6 +216,7 @@
                   </div>
                 </div>
               </li>
+              <!-- При добавлении класса active кнопка будет розовой + появится popover -->
               <li class="user-navigation-item user-navigation-item-cart">
                 <a
                   class="user-navigation-link user-navigation-link-cart"
@@ -240,6 +240,7 @@
                 >
 
                 <!-- Popover  Cart 2 Товара-->
+
                 <div class="popover popover-cart">
                   <div class="popover-cart-content">
                     <h2 class="popover-title">Корзина</h2>
@@ -449,7 +450,7 @@
           </div>
 
           <!-- Checkbox Fillers -->
-          <div class="catalog-form-row">
+          <div class="catalog-form-row catalog-form-row-fillers">
             <section class="checkbox">
               <h2 class="checkbox-title catalog-sorting-titles">
                 Наполнители:
@@ -717,7 +718,7 @@
                   ><h3 class="product-card-title">Черника</h3></a
                 >
                 <p class="product-card-description">
-                  Крем-брюле с черничным джемом
+                  Крем-брюле с&nbsp;черничным джемом
                 </p>
                 <div class="buy">
                   <span class="product-price">330 ₽/кг</span>
@@ -758,7 +759,7 @@
                   ><h3 class="product-card-title">Бабл-гам</h3></a
                 >
                 <p class="product-card-description">
-                  Ванильный пломбир со сладкой посыпкой
+                  Ванильный пломбир со&nbsp;сладкой посыпкой
                 </p>
                 <div class="buy">
                   <span class="product-price">320 ₽/кг</span>
@@ -840,7 +841,7 @@
                   ><h3 class="product-card-title">Банан</h3></a
                 >
                 <p class="product-card-description">
-                  Сливочный пломбир с банановым вкусом
+                  Сливочный пломбир с&nbsp;банановым вкусом
                 </p>
                 <div class="buy">
                   <span class="product-price">340 ₽/кг</span>
@@ -922,7 +923,7 @@
                   ><h3 class="product-card-title">Клубничка</h3></a
                 >
                 <p class="product-card-description">
-                  Сливочный пломбир с клубничным вкусом
+                  Сливочный пломбир с&nbsp;клубничным вкусом
                 </p>
                 <div class="buy">
                   <span class="product-price">300 ₽/кг</span>
@@ -1004,7 +1005,7 @@
                   ><h3 class="product-card-title">Ментол</h3></a
                 >
                 <p class="product-card-description">
-                  Сливочный пломбир с ментоловым сиропом
+                  Сливочный пломбир с&nbsp;ментоловым сиропом
                 </p>
                 <div class="buy">
                   <span class="product-price">320 ₽/кг</span>
@@ -1085,7 +1086,9 @@
                 <a class="product-card-title-link" href=""
                   ><h3 class="product-card-title">Крем-брюле</h3></a
                 >
-                <p class="product-card-description">Классическое крем-брюле</p>
+                <p class="product-card-description">
+                  Классическое крем&nbsp;-&nbsp;брюле
+                </p>
                 <div class="buy">
                   <span class="product-price">280 ₽/кг</span>
                   <button class="product-buy" type="button">
@@ -1116,8 +1119,8 @@
       <!-- Catalog bottom -->
       <section class="catalog-bottom">
         <h2 class="visually-hidden">Управление каталогом</h2>
-        <button class="catalog-button white-button loading" type="button">
-          <!-- Class Loading - это состояние спинера для загрузки -->
+        <!-- При добавлении класса loading - у кнопки появится состояние спинера для загрузки -->
+        <button class="catalog-button white-button" type="button">
           Показать еще
         </button>
         <div class="catalog-pagination">
