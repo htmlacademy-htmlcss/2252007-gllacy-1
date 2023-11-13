@@ -76,7 +76,7 @@ body.slider-3 .slider-image::after {
 .container {
   margin: 0 auto;
   width: 1170px;
-  margin-bottom: -5px;
+  margin-bottom: -1px;
 }
 
 .main-logo:hover {
@@ -740,7 +740,7 @@ img {
 .promotion {
   width: 1170px;
   margin: 0 auto;
-  margin-bottom: 80px;
+  margin-bottom: 81px;
 }
 
 .promotion-main-title {
@@ -1202,6 +1202,7 @@ a.product-card-image-link {
 
 .delivery-title {
   margin: 0;
+  margin-top: 1px;
   margin-bottom: 24px;
   width: 356px;
   text-align: left;
@@ -1378,7 +1379,7 @@ a.product-card-image-link {
 }
 
 .delivery-form-field {
-  height: 46px;
+  height: 45px;
   color: #2d3440;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -1437,9 +1438,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .delivery-button {
-  width: 160px;
+  width: 152px;
   margin: 0 auto;
-  margin-top: 4px;
+  margin-top: 13px;
 }
 
 /* Contacts */
@@ -1491,7 +1492,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-weight: 400;
   line-height: 22px;
   margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 11px;
 }
 
 .contacts-box-phone {
@@ -1526,6 +1527,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .contacts-button {
   width: 250px;
+  margin-bottom: 2px;
 }
 
 /* Modal Window */
@@ -2038,7 +2040,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .footer-container {
   width: 1170px;
-  margin-top: 49px;
+  margin-top: 48px;
   margin-bottom: 48px;
   display: flex;
   justify-content: space-between;
@@ -2136,6 +2138,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin: 0 auto;
 }
 
+.main-content-catalog {
+  width: 1170px;
+  margin: 0 auto;
+  margin-top: -5px;
+}
+
 .breadcrumbs-content {
   width: 379px;
   margin: 32px 791px 40px 0;
@@ -2203,7 +2211,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .catalog-form-row {
-  width: 823px;
+  /* width: 823px; */
   margin: 0;
   margin-left: 0;
   display: flex;
@@ -2431,7 +2439,7 @@ select {
   margin: 0;
   background-color: #ffcbd8;
   border-radius: 18px;
-  padding: 9px 24px;
+  padding: 10px 24px;
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -2597,8 +2605,8 @@ svg.checked-svg:hover path {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 14px;
-  margin-bottom: 14px;
+  margin-top: 13px;
+  margin-bottom: 15px;
 }
 
 .catalog-pagination-pages {
