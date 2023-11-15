@@ -127,6 +127,8 @@ body.slider-3 .slider-image::after {
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
+  margin-left: 6px;
+  /* margin-top: 11px; */
 }
 
 .main-navigation-item.active .dropdown-item-svg {
@@ -352,12 +354,15 @@ body.slider-3 .slider-image::after {
 .user-navigation-link-enter,
 .user-navigation-link-cart {
   padding: 6px 16px;
+  /* margin-left: 16px; */
 }
 
 .enter,
 .cart {
   padding-right: 6px;
   padding-top: 1px;
+  width: 16px;
+  height: 17px;
 }
 
 /* Class Active User Navigation*/
@@ -822,9 +827,12 @@ img {
   padding: 0;
   width: 1170px;
   list-style: none;
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  gap: 40px 30px;
 }
 
 .product-card {
@@ -909,6 +917,8 @@ a.product-card-image-link {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
 }
 
 .product-buy:hover {
@@ -1028,6 +1038,7 @@ a.product-card-image-link {
   background-image: url("../images/background-subscription.jpg");
   border-radius: 16px;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .article-text {
@@ -1285,7 +1296,7 @@ a.product-card-image-link {
   height: 14px;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 1px;
 }
 
 .tooltip-text {
@@ -1399,6 +1410,29 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .field-date {
   width: 101px;
 }
+
+.field-date[type="date"]::-webkit-calendar-picker-indicator {
+  -webkit-appearance: none;
+}
+
+/* .field-date[type="date"]::-webkit-calendar-picker-indicator {
+  visibility: hidden;
+} */
+
+.field-date[type="date"]::-webkit-inner-spin-button,
+.field-date[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+.field-date[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  color: transparent;
+}
+
+/* .field-date[type="date"]::-moz-calendar-picker-indicator {
+  display: none;
+} */
 
 .field-phone {
   width: 268px;
@@ -1744,7 +1778,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .field-enter-password {
-  background-image: url("../images/password-enter.svg");
+  /* background-image: url("../images/password-enter.svg"); */
   background-repeat: no-repeat;
   background-position: 15px 20px;
   height: 44px;
@@ -2223,6 +2257,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-position: top 10px right 13px;
   background-repeat: no-repeat;
   cursor: pointer;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .select-control:hover {
@@ -2236,12 +2274,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .select-control:focus-visible {
   box-shadow: inset 0 0 0 2px rgba(252, 252, 252, 1);
   outline: none;
-}
-
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 
 /* Price */
@@ -2456,7 +2488,8 @@ select {
 }
 
 .control-input {
-  position: relative;
+  /* position: relative; */
+  position: absolute;
 }
 
 .control-input[type="checkbox"]:checked + .checkbox-control-mark {
@@ -2466,6 +2499,14 @@ select {
 
 .control-input[type="checkbox"]:checked ~ .checked-svg {
   display: block;
+}
+
+.control:hover .checkbox-control-mark {
+  border: 2px solid rgba(252, 252, 252, 1);
+}
+
+.control:hover path {
+  fill: #fcfcfc;
 }
 
 /* Checkbox Focus */
